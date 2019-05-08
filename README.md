@@ -5,14 +5,14 @@ In this repository I have adding Spring Security to perform authentication and a
 
 A normal GET and POST will return a 401, all endpoints are protected, need authentication.
 
-# Send a GET request along with user login.
+ Send a GET request along with user login.
 
 > curl localhost:8080/books -u user:password
 
 > curl localhost:8080/books/1 -u admin:password
 
 
-# Try to send a POST request with ‘user’ login, it will return 403, Forbidden error. This is because the user has no right to send a POST request.
+ Try to send a POST request with ‘user’ login, it will return 403, Forbidden error. This is because the user has no right to send a POST request.
 
 > curl -X POST localhost:8080/books -H "Content-type:application/json" 
 	-d {\"name\":\"dummyName\",\"author\":\"tejinder\",\"price\":\"9.88\"} -u user:password
@@ -26,7 +26,7 @@ A normal GET and POST will return a 401, all endpoints are protected, need authe
 }
 
 
-# Try to send a POST request with admin login
+ Try to send a POST request with admin login
 
 > curl -X POST localhost:8080/books -H "Content-type:application/json" 
 	-d {\"name\":\"dummyName\",\"author\":\"tejinder\",\"price\":\"9.88\"} -u admin:password
