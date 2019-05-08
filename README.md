@@ -12,7 +12,7 @@ A normal GET and POST will return a 401, all endpoints are protected, need authe
 > curl localhost:8080/books/1 -u admin:password
 
 
- Try to send a POST request with ‘user’ login, it will return 403, Forbidden error. This is because the user has no right to send a POST request.
+Try to send a POST request with ‘user’ login, it will return 403, Forbidden error. This is because the user has no right to send a POST request.
 
 > curl -X POST localhost:8080/books -H "Content-type:application/json" 
 	-d {\"name\":\"dummyName\",\"author\":\"tejinder\",\"price\":\"9.88\"} -u user:password
